@@ -4,7 +4,7 @@ Kickass-Redis - a loose framework of Redis based data solutions
 This project aims to create a repository of useful python libraries built on top of redis (and using each other),
 to automate data modeling with Redis.
 
-##For discussion, help and contributing code - join the google group at https://groups.google.com/forum/#!forum/kickass-redis
+## For discussion, help and contributing code - join the google group at https://groups.google.com/forum/#!forum/kickass-redis
 
 Redis is relatively low level, and while it is simple to start using, getting a good knowledge of how to model problems
 with it in an efficient way can be tricky. So I've created this project to wrap common use cases, into a loose framework
@@ -12,7 +12,7 @@ of redis based solutions for real world problems.
 
 The project has started out as a bunch of code examples for a presentation I recently gave on [IL Tech Talks](http://www.iltechtalks.org.il/),  that can be found here: http://www.slideshare.net/dvirsky/kicking-ass-with-redis
 
-#Installation
+# Installation
 
 Option 1:
 
@@ -29,7 +29,7 @@ Option 2:
 `sudo pip install kickass_redis`
 
 
-#Components
+# Components
 ----------
 
 To kick things off, the framework includes the following components:
@@ -40,7 +40,7 @@ a fast yet simple ORM (well, OM actually) that automates creation, indexing and 
 
 Indexes include: simple string index, numeric index that supports sorting and ranges, simplistic full text index, and a unique key.
 
-###Example:
+### Example:
 
 ```python
 from kickass_redis.patterns.object_store.objects import IndexedObject, KeySpec
@@ -87,7 +87,7 @@ efficient unique value counter (to be used mostly as a unique users counter) wit
 
 It makes use of new redis-2.6 commands BITCOUNT and BITOP, so it will not function on redis-2.4.
 
-###Example:
+### Example:
 
 ```python
 from kickass_redis.patterns.bitmap_counter import BitmapCounter
@@ -109,7 +109,7 @@ print counter.cohortAnalysis(week, counter.RES_DAY)
 print counter.funnelAnalysis(week, counter.RES_DAY)
 ```
 
-###New:
+### New:
 It now also supports mapping of non sequential or non numeric ids to incemental ids, that makes it memory optimized.
 
 
@@ -164,7 +164,7 @@ A unit-test like set of assertions about redis data to be used to validate the d
 * redis-py
 * [pyhash package](https://code.google.com/p/pyfasthash/)
 
-###Example:
+### Example:
 
 ```python
 
@@ -209,7 +209,7 @@ test.run()
 
 # Feel free to contribute more recipes...
 
-#Project TODO:
+# Project TODO:
 
 1. Add unit tests for all objects
 
